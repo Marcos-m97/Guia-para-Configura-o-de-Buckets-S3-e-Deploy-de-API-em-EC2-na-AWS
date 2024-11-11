@@ -483,7 +483,7 @@ Após a criação, será gerado o ID de uma instância EC2.
   - Ao executar o comando pela primeira vez, o terminal solicitará a confirmação da conexão. Digite **Yes** para aceitar.
   - Caso tenha definido uma senha ao gerar a chave SSH, insira-a quando solicitado.
 
-- Se a conexão for fechada na primeira tentativa, insira o comando novamente para garantir uma conexão bem-sucedida.
+-   Se a conexão for fechada na primeira tentativa, insira o comando novamente para garantir uma conexão bem-sucedida.
 
 - Verifique se o sistema operacional da instância precisa de atualizações com o comando:
   `sudo yum update -y`
@@ -509,7 +509,6 @@ Após a criação, será gerado o ID de uma instância EC2.
 
 > Observação: Para clonar o repositório, pode ser necessário gerar um token no GitHub e copiar o código do token no comando:
 > Exemplo: git clone https://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@github.com/Marcos-m97/NODE-AWS-PB-compass-desafio-3.git
-> Outra opção é configurar SSH
 
 - Verificar se atualizaçoes foram feitas no codigo da API
   `git pull origin main`
@@ -518,7 +517,7 @@ Após a criação, será gerado o ID de uma instância EC2.
   `cd <minha-api>`
 
   > ATENÇÃO: Quando a conexão SSH for encerrada, será necessário acessar o repositório novamente
-  > Exemplo: cd NODE-AWS-PB-compass-desafio-3
+  > Exemplo: `cd NODE-AWS-PB-compass-desafio-3`
 
 - Instalar as dependências do projeto
   `npm install`
@@ -546,7 +545,7 @@ Após a criação, será gerado o ID de uma instância EC2.
 - Concluir o startup com o comando save
   `pm2 save`
 
-> Outra opção é apenas o comando direto, mas caso a instância seja interrompida ou reiniciada, será necessário reiniciar o PM2 `manualmente: pm2 start dist/index.js --name "minha-api"`
+> Outra opção é apenas o comando direto, mas caso a instância seja interrompida ou reiniciada, será necessário reiniciar o PM2 manualmente: `pm2 start dist/index.js --name "minha-api"`
 
 > Caso tenha problema ao reiniciar o servidor após encerrar a conexão SSH ("Error: listen EADDRINUSE: address already in use :::8080"),
 > buscar o processo que ainda está rodando: `sudo lsof -i :8080`
