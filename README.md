@@ -27,6 +27,9 @@
 - documentação Swagger no S3:
   https://amzn-s3-swagger-compass-car-docs.s3.us-east-2.amazonaws.com/swagger-API-documentation.html
 
+- Link para acessar este documento no README para melhor visualização:
+  https://github.com/Marcos-m97/Guia-para-Configura-o-de-Buckets-S3-e-Deploy-de-API-em-EC2-na-AWS/blob/main/README.md
+
 
 ## Aos Instrutores
 
@@ -158,7 +161,7 @@ Clique em **Create Bucket**.
    - No bucket, acesse a aba **Permissões**.
    - Clique em **Lista de controle de acesso (ACL)** e edite as permissões, concedendo **Leitura** para todas as opções, mantendo as permissões completas para o proprietário do bucket.
 
-   - **Definir Permissões de Acesso Público ao Fazer Upload**:
+    **Definir Permissões de Acesso Público ao Fazer Upload**:
    - Na aba **Permissões** do upload, selecione a opção **Conceder acesso público de leitura**.
    - Um aviso será exibido com a mensagem:
    - "Qualquer pessoa no mundo poderá acessar os objetos especificados…"
@@ -495,9 +498,9 @@ Após a criação, será gerado o ID de uma instância EC2.
 - Instalar o Node.js
   `sudo yum install -y nodejs`
 
-> Verificar a instalação do Node.js e npm
-> node -v Mostra a versão do Node.js
-> npm -v Mostra a versão do npm
+> Verificar a instalação do Node.js e npm:
+> `node -v` Mostra a versão do Node.
+> `npm -v` Mostra a versão do npm
 
 - Checar se a porta configurada na API corresponde à porta configurada na instância EC2 (8080)
 
@@ -532,7 +535,7 @@ Após a criação, será gerado o ID de uma instância EC2.
   > `sudo npm install -g pm2`
 
 - (Opcional) Configurar o PM2 para reiniciar a API automaticamente caso a instância EC2 seja reiniciada
-  ` pm2 startup`
+  `pm2 startup`
 
   > O comando `pm2 startup` gera um comando que deve ser copiado e colado no terminal, exemplo:
   > Exemplo: `sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u ec2-user --hp /home/ec2-user`
@@ -556,4 +559,3 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html?icm
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-launch-tutorials.html
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/tutorial-launch-my-first-ec2-instance.html
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html
-
